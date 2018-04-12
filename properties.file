@@ -1,0 +1,8 @@
+# contents of properties file
+[main]
+limit_days = 10
+limit_count= 1000
+account_id = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.Im15aWJtcHJvZmlsZXRlc3Qi.LiNv-C-H2NkvgMUDXHdJmBVlKxDUE24PKjFhmJNB9gA
+password = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.Im15aWJtcHIwZmlsZXRlc3RAMTIzIg.uODzt5A7BlPN3zO3z4J_dBo4QGw9WQ3vVyZJpM7DLJ0
+secret = fe1a1915a379f3be5394b64d14794932
+

@@ -1,0 +1,32 @@
+{
+  "name": "emailverify",
+  "description": "emailverify description",
+  "version": "1.0.0",
+  "private": true,
+  "main": "bin/www",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "cloudant": "^1.10.0-NOTICE",
+    "cookie-parser": "^1.3.3",
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "jwt-simple": "^0.5.1",
+    "le_node": "^1.7.1",
+    "morgan": "^1.6.1",
+    "npm": "^5.8.0",
+    "properties-reader": "0.0.16",
+    "serve-favicon": "^2.3.0",
+    "winston": "^2.4.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-develop": "^0.4.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "request": "^2.60.0",
+    "time-grunt": "^1.2.1",
+    "load-grunt-tasks": "^3.2.0"
+  }
+}
