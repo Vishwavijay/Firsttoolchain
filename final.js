@@ -37,11 +37,10 @@ var cloudant = Cloudant(
 		});
 
 exports.evscleanup = function() {
-	console.log("inside evscleanup");
-
+	
 	// Use database
 	// Assumes the database exists
-	logger.info("Using database");
+	logger.info("Using evs database");
 	var cloudantDB = cloudant.db.use("testemailverify");
 	var limit_days = properties.get('main.limit_days');
 	var limit_count = properties.get('main.limit_count');
@@ -62,19 +61,20 @@ exports.evscleanup = function() {
 							logger
 									.info("Total count of the records for email verify deletion are:-------   "
 											+ body.rows.length);
-							console.log("just before printing from Cloudant" + body.rows.length);
+							
 							for (var i = 0, len = body.rows.length; i < len; i++) {
 								logger.info("id: " + body.rows[i].id
 										+ " -rev- " + body.rows[i].doc._rev);
-								// cloudantDB.destroy(body.rows[i].id,
-								// body.rows[i].doc._rev,
-								// function(err, data) {
+								cloudantDB.destroy(body.rows[i].id,
+								 body.rows[i].doc._rev,
+								 function(err, data) {
 								if (err) {
 									res.json({
 										err : err
 									});
 									return;
 								}
+								});
 							}
 						} else {
 							logger.info("Error Message " + err);
