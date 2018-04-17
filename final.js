@@ -73,8 +73,8 @@ exports.evscleanup = function() {
 										err : err
 									});
 									return;
-								}
-								//});
+								}}
+								//);
 							}
 						} else {
 							logger.info("Error Message " + err);
