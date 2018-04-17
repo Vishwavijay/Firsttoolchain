@@ -65,8 +65,8 @@ exports.evscleanup = function() {
 							for (var i = 0, len = body.rows.length; i < len; i++) {
 								logger.info("id: " + body.rows[i].id
 										+ " -rev- " + body.rows[i].doc._rev);
-								cloudantDB.destroy(body.rows[i].id,
-								 body.rows[i].doc._rev,
+								//cloudantDB.destroy(body.rows[i].id,
+								//body.rows[i].doc._rev,
 								 function(err, data) {
 								if (err) {
 									res.json({
@@ -74,7 +74,7 @@ exports.evscleanup = function() {
 									});
 									return;
 								}
-								});
+								//});
 							}
 						} else {
 							logger.info("Error Message " + err);
